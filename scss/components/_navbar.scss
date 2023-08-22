@@ -1,0 +1,62 @@
+
+/* nav estilos*/
+
+header{
+    @include flex(row, space-between, center);
+    color: $secondcolor;
+    width: 100%;
+
+}
+
+nav {
+    background-color: lighten($color: $maincolor, $amount: 20%);
+
+}
+
+.navbar  {
+
+    background: linear-gradient(to right, $maincolor, darken($maincolor,30%));
+}
+
+.nav-link {
+    font-size: 24px;
+    color: darken($color: $maincolor, $amount: 20%);
+    text-decoration: none;
+    padding: 3px;
+    border: 2px solid transparent;
+    transition: all 0.3s ease-in-out;
+    margin: 20px;
+&:hover {
+    transform: scale(1.1);
+    color: darken($color: $maincolor, $amount: 30%);
+    border-radius: 5px;
+}
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+
+
+.custom-navbar {
+    background-color: $maincolor;
+}
+
+
+
+.navbar-font {
+    font-size: 30px;
+}
+
+.nav-link-button {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 5px 10px;
+    margin-right: 10px;
+    transition: background 0.3s ease-in-out;
+    &:hover{
+        background: darken($color: $maincolor, $amount: 10%);
+    }
+}
