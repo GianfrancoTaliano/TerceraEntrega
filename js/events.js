@@ -1,3 +1,4 @@
+
 const addToCart = (id) => {
 	const selectedPaleta = paletas.find(paleta => paleta.id === id);
 	if (selectedPaleta) {
@@ -5,7 +6,7 @@ const addToCart = (id) => {
 	  localStorage.setItem('cart', JSON.stringify(cart));
 	  updateCartUI();
 	}
-  }
+}
 
   const updateCartUI = () => {
 	const cartDetailsContainer = document.getElementById('cart-details');
@@ -41,11 +42,3 @@ const addToCart = (id) => {
   
   
   
-
-  window.onload = () => {
-	const storedCart = localStorage.getItem('cart');
-	if (storedCart) {
-	  cart = JSON.parse(storedCart);
-	  updateCartUI();
-	}
-  }
